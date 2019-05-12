@@ -22,15 +22,15 @@ app.put('/:id', (req, res)=>{
     res.status(202).send(pessoaEncontrada);
 })
 
-app.delete('/:id', (req, res)=>{
-    for(let index = 0; index< pessoas.length; index++){
+app.delete('/:id', (req, res) => {
+    for (let index = 0; index < pessoas.length; index++) {
         const pessoa = pessoas[index];
-        if(pessoa.id == req.params.id){
-            pessoas.slice(index, 1);
+        if (pessoa.id == req.params.id) {
+            pessoas.splice(index, 1);
         }
     }
-    res.status(204).send('Registro excluído');
-})
+    res.status(204).send();
+});
 
 app.listen(3000, ()=> {
     console.log('Servidor Api NoFood iniciando na porta 3000.')
