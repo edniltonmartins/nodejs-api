@@ -1,19 +1,30 @@
 const express = require('express');
 const app = express();
 
+let pessoas = [];
+
 app.get('/', (req, res )=>{
-    res.status(200).send('Olá Mundo!');
+    res.status(200).send(pessoas);
 })
 
 app.post('/', (req, res) =>{
-    res.status(201).send('Criado');
+    pessoas.push(req.body);
+    res.status(201).send(req.body);
 })
 
-app.put('/', (req, res)=>{
-    res.status(202).send('Atualizado');
+app.put('/:id', (req, res)=>{
+    let pessoaEncontrada = pessoas.filter(pes=>{ return pes.id == req.params.id});
+    pessoaEncontrada = req.body;
+    res.status(202).send(pessoaEncontrada);
 })
 
-app.delete('/', (req, res)=>{
+app.delete('/:id', (req, res)=>{
+    for(let index = 0; index< pessoas.length; index++){
+        const pessoa = pessoas[index];
+        if(pessoa.id == req.params.id){
+            pessoas.slice(index, 1);
+        }
+    }
     res.status(204).send('Registro excluído');
 })
 
