@@ -21,4 +21,4 @@ categoriaModel.pre('save', next =>{
     next();
 });
 
-module.exports = mongoose.model('categoria', categoriaModel);
+module.exports = mongoose.model('Categoria', categoriaModel);

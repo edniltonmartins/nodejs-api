@@ -14,6 +14,6 @@ mongoose.connect(variables.Database.connection);
 
 //Configurando rotas
 app.use("/api/categoria", categoriaRouter);
-app.use("/api/produto", produtoRouter);
+// app.use("/api/produto", produtoRouter);
 
 module.exports = app;
