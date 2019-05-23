@@ -1,13 +1,8 @@
 'use strict'
-require('../models/categoria-model');
-const mongoose = require('mongoose');
-const categoria = mongoose.model('Categoria');
+
 const repository = require('../repositories/categoria-repository');
 
-
-function categoriaController(){
-
-}
+function categoriaController(){}
 
 categoriaController.prototype.post = async (req, res) =>{ 
     let resultado = await new repository().create(req.body);
@@ -34,4 +29,4 @@ categoriaController.prototype.delete = async (req, res) =>{
     res.status(204).send(deletado);
 };
 
-module.exports = categoriaController;
+module.exports = categoriaController();

@@ -24,4 +24,4 @@ produtoController.prototype.delete = async (req, res) =>{
 
 };
 
-module.exports = produtoController;
+module.exports = produtoController();
