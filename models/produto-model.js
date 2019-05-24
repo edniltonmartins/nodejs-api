@@ -21,4 +21,4 @@ produtoModel.pre('save', next => {
     next();
 });
 
-module.exports = mongoose.model('produto',produtoModel);
+module.exports = mongoose.model('Produto',produtoModel);
