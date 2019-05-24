@@ -15,7 +15,7 @@ categoriaController.prototype.put = async (req, res) =>{
 };
 
 categoriaController.prototype.get = async (req, res) =>{ 
-    let lista = await new repository().getall();
+    let lista = await new repository().getAll();
     res.status(200).send(lista);
 };
 
@@ -29,4 +29,4 @@ categoriaController.prototype.delete = async (req, res) =>{
     res.status(204).send(deletado);
 };
 
-module.exports = categoriaController();
+module.exports = categoriaController;

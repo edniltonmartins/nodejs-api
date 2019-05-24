@@ -31,4 +31,4 @@ class produtoRepository{
     }
 }
 
-module.exports = produtoRepository();
+module.exports = produtoRepository;

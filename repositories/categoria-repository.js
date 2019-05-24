@@ -31,4 +31,4 @@ class categoriaRepository{
     }
 }
 
-module.exports = categoriaRepository();
+module.exports = categoriaRepository;
