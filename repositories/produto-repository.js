@@ -1,6 +1,6 @@
 require('../models/produto-model');
 
-const base = require('../config/base/repository-base');
+const base = require('../bin/base/repository-base');
 
 class produtoRepository{
     constructor(){ 

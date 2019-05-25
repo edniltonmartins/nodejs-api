@@ -1,5 +1,5 @@
 require('../models/categoria-model');
-const base = require('../config/base/repository-base')
+const base = require('../bin/base/repository-base')
 
 class categoriaRepository{
     constructor(){ 

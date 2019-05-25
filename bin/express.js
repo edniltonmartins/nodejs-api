@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const variables = require('../config/environment/variables');
+const variables = require('../bin/environment/variables');
 
 const categoriaRouter = require('../routes/categoria-router');
 const produtoRouter = require('../routes/produto-router');
