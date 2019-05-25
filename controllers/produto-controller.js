@@ -22,8 +22,8 @@ produtoController.prototype.get = async (req, res) =>{
 };
 
 produtoController.prototype.getById = async (req, res) =>{ 
-    let categoriaEncontrada =  await new repository().getById(req.params.id);
-    res.status(200).send(categoriaEncontrada);
+    let produtoEncontrado =  await new repository().getById(req.params.id);
+    res.status(200).send(produtoEncontrado);
 };
 
 produtoController.prototype.delete = async (req, res) =>{ 

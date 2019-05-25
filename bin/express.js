@@ -5,6 +5,7 @@ const variables = require('../bin/environment/variables');
 
 const categoriaRouter = require('../routes/categoria-router');
 const produtoRouter = require('../routes/produto-router');
+const usuarioRouter = require('../routes/usuario-router');
 
 const app = express();
 
@@ -16,5 +17,6 @@ mongoose.connect(variables.Database.connection);
 //Configurando rotas
 app.use("/api/categoria", categoriaRouter);
 app.use("/api/produto", produtoRouter);
+app.use("/api/usuario", usuarioRouter);
 
 module.exports = app;
